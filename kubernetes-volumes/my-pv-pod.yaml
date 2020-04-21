@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+ name: pv-pod
+spec: 
+ volumes:
+  - name: pvol
+    persistentVolumeClaim: 
+     claimName: pvc
+ containers:
+  - image: alpine
+    name: container1
+    volumeMounts:
+     - name: pvol
+       mountPath: /data  

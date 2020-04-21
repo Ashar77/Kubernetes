@@ -1,0 +1,29 @@
+mounts a file or directory from the host node's filesystem into your pod
+
+remains even after the pod is terminated 
+
+
+similar to docker volume (which we make on local machine)
+
+difference b/w emptyDir and hostpath volume is, data inside the emptydir is 
+immediatly wiped off once the pod is deleted for any reaon, whereas data inside 
+the hostpath volume is retained even after the pod is terminated. Incase if the pod
+is get scheduled on the same node and the hostpath exsists then it will immediatly
+pick up from the previous state.
+
+
+use hostpath cautiously when required, because the pods are scheduled on multiple
+worker nodes inside the cluster then kubernetes will create the hostpath volume on
+each of them and having their own exclusive hostpath volumes which may not be in sync and every pod will have to deal with storage very differently
+
+
+after deletion if any other pod is created and it has the same configuration then the data inside the hostpath volume (directory on the node) wil be mounted now at the new mount address provided in the pod 
+
+
+
+
+  
+
+`~ we will be creating pods with hostpaths on specific nodes?.
+
+

@@ -1,0 +1,15 @@
+stateless app = app which donot store any data
+
+k8s volumes are better then docker volumes
+
+at its core volume is just a directory which may have some data in it, and is accessible by the container 
+
+2 categories of volumes are efemeral and durable
+
+efemeral --> created when pod is created , die when pod is die
+
+durable ---> created when pod is created , data inside is persisted even after pod is dead 
+
+
+there are around 30 types of volume supported in kubernetes.
+

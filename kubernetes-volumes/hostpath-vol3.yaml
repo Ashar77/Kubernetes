@@ -1,0 +1,18 @@
+#hostpath volume 
+
+apiVersion: v1
+kind: Pod
+metadata: 
+ name: redis-hostpath3
+spec:
+ containers: 
+  - name: redis-container
+    image: redis
+    volumeMounts:
+     - mountPath: /test-mnt
+       name: test-vol3
+ volumes: 
+  - name: test-vol3
+    hostPath: 
+     path: /home/ashar/Documents/kubernetes-volumes/database
+

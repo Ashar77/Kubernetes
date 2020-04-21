@@ -1,0 +1,35 @@
+Container Orchestration Engine:
+	container orchestration engine automates deploying,scaling,and managing containerized 
+	applications on a group of servers.
+
+Kubernetees
+Docker swam
+Apache mesos
+
+Every COE perform 2 functions: Clustring and Scalability 
+ also perform scheduling 
+
+Scalability:
+	incresase and decrease application instances or node instances as per the traffic demand
+
+COE also perform Load balancing and fault tolerance 
+
+
+FEARURES OF COE:
+
+	Clustering
+
+	Scheduling
+
+	Scalability
+
+	Load balancing
+
+	Fault tolerance
+
+	Deployment
+
+
+
+
+

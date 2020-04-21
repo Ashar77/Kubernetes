@@ -1,0 +1,47 @@
+imagine that,using nodePort service type you exposed your web app to oustide 
+world on the internet
+
+problem is:
+
+which nodeIP and nodePort will you provide to the end-users ?
+are these users comfortable using this Ip and port numbers to access this app ?
+how the traffic is balanced equally amoung all nodes inside the cluster ?
+
+Loadbalancer service is the standard goto solution !
+
+
+consider you have all your setup on cloud like g-cloud,azure or aws then once 
+you create the service of type load balancer it will automatically create the
+laodbalancer in the backend and generate the PUBLIC IP address for you (ThankGod)
+
+Once it is done you can use that PublicIp address which will forward all the
+traffic to your service and you can send http tcp udp and all different kinds of 
+traffic 
+
+Think twice when you are creating this service !!! $$$ (cost you dollars --> solution is ingres)
+
+
+clusterIp = serviceIp internal to the cluster 
+it will take few minutes to get the external Ip     (external ip == public ip ?)
+
+google cloud platfrom free ? playground??
+
+Endpoint Ip is the podIp it also includes the port
+
+now using the external ip we can access the app 
+
+externalIp --> loadbalancer-Service--->nodeportService--->nodes--->pods(endpoints)--->containers--->image--->app !
+
+
+deployment inturns create pods 
+if we delete loadbalancer service the pods under it are also deleted  
+
+
+
+
+
+
+
+
+
+

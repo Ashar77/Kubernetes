@@ -1,0 +1,44 @@
+It ensures that a specified number of pods are running at any time
+
+
+Replica set and pods are associated with 'labels'
+
+
+Replica set ---> set-based Selectors + Equality-based Selectors
+
+Replication controller ---> only Equality-based Selectors
+
+
+
+in manifest file of r-s in selector section:
+
+give matchlabels in case of: ReplicaSet,Deployments,Jobs,DaemonSet (new resources) 
+
+do not give match labels in case of : Replicationcontrollers , services (old resources)
+
+
+
+----------------------------------------
+ReplicaSet ensures that a specified number of pods are running at any time
+
+if we have created 3 replicas of a pod in a replica set, rs will make sure that we always have
+those three pods up and running on our cluster, if any of the pods show any kind of error
+it will remove it and create another pod so the number of pods will always remain 3 
+if any node is unhealty it will create another pod on any other healthy node and the pod on that 
+unhealthy node will have the status 'unknown' and after sometime that pod on that unhealthy node 
+will be off.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

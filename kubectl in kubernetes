@@ -1,0 +1,217 @@
+using kubectl
+
+create.get
+
+describe, delete
+
+exec,logs 
+
+
+we manage kubernetes resources and perform above operations on them using kubectl command.
+
+
+
+KUBECTL DEFINITION:
+	
+	"Command line utility for running commands against Kubernetes clusters"
+
+Kubectl Syntax:
+
+	kubectl [command] [TYPE] [NAME] [flags]
+
+Commands
+
+kubectl create      ---> use for creating the resources 
+
+
+kubectl get 	    ---> use for displaying the resources
+
+-------------------------------------------------------------
+
+"Kubectl create command"
+
+
+kubectl create -f example.yaml   Create a resource from a file
+
+kubectl create -f pod-example.yaml\
+
+kubectl create -f deploy-example.yaml
+
+kubectl create -f <directory>
+-----------------------------------------------------------------
+"kubectl get command"
+
+kubctl get [TYPE(s)] [NAME(s)] [FLAGS]          List one or more resources
+
+kubectl get pods <pod-name>  		        displaying a specific pod
+
+kubectl get pods -o wide	                additional flag for getting additional 						        knowledge about the resource (in this case 				     	     		we are getting the ip address of pod)
+
+ 
+kubectl get pods,deployment 		     displaying multiple resorces with single command 
+---------------------------------------------------------------------------------------------
+
+kubectl describe command:
+			for decribing detailed state of one or more resorce completly 
+
+
+"kubectl get" only display high level information of a resource whereas kubectl describe
+command completly describe that resource in detail inciuding the events triggered
+
+
+e.g:
+
+kubectl describe nodes <node-name>   describing a specific node
+  
+kubectl describe pods <pod-name>     describing a specific pod
+
+kubectl describe pods 		     describing multiple pods
+
+---------------------------------------------------------------------------------------
+
+Kubectl delete command:
+		for deleting the kubernetes resources
+
+
+kubectl delete - Delete resources
+
+kubectl delete -f pod.yaml			   
+
+kubectl delete pods,services -l name=<label-name>  delting multiple resources with a label
+
+kubectl delete pods --all     			   deleting all pods
+
+-------------------------------------------------------------------------------------
+
+
+kubectl exec command:
+		"for interacting with the container"
+execute a command against a container in a pod.
+
+
+kubectl exec <pod-name> date
+
+kubectl exec <pod-name> -c <container-name> date
+
+kubectl exec -ti <pod-name> /bin/bash
+
+------------------------------------------------------------------------------------------------
+
+kubectl logs command:
+	"for printing the logs for a container in a pod"
+
+
+kubectl logs <pod-name>  		print logs of a specific pod
+
+kubectl logs -f <pod-name>		stream logs from a running pod
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

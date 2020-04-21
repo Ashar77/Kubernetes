@@ -1,0 +1,95 @@
+Deployments ----> Updates and Rollbacks and scaling
+
+we manage all the pods and repicasets just by a single doployment manifest file
+
+
+features of deployments:
+
+Multiple Replicas
+
+Updrade
+
+Rollback
+
+Scale up or down
+
+Pause and Resume	??????????
+
+------------------------
+
+Deployment Types:
+
+	shifting from A to B
+
+
+Recreate:
+	shutting down A ,maker sure A is OFF, Deploy B (there will be a downtime in this type of deployment)
+
+
+RollingUpdate(Ramped or Incremental):
+				it will slowly update by replacing app instances one after the another
+				it is a default strategy in kubernetes but it can take some time.
+
+
+
+
+Canary:  
+   
+    gradually shifting production traffic from A version to B.
+	(when you donot update all the instances)
+(ideal version for one who want to test the new version)
+
+
+Blue/Green Update:
+	green B is deployed along side the version A which is Blue with exactly same number of instances
+	
+
+do we change the image in container while updating in a deployment ?
+
+
+
+
+
+*) k edit deploy nginx-deploy 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

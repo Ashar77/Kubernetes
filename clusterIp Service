@@ -1,0 +1,13 @@
+we have front app and backend pods , f-pods are exposed to the outside world 
+which provide access to the app
+
+backend pods are strictly internal and are not exposed to the outside world
+like db-pods they provide functionality to the f-pods whenever it is required 
+
+to access these backend pods and connect them to the frontend pods we use service
+type called CLUSTER-IP 
+
+this makes service reachable within the cluster it is default service type
+
+
+

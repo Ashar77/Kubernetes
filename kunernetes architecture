@@ -1,0 +1,140 @@
+
+kubernetes is  container orchestration engine
+
+why kubernetes:
+	google inc
+	maturity
+	features
+	easy integration
+	community
+
+docker ---> container runtime engine
+
+
+
+learning Objectives:
+
+	High levek overview
+
+	kubernetes Master
+
+	Worker node
+
+	Kubernetes Architecture
+
+
+*) currently kubernetes support upto 5,000 worker nodes per cluster
+*) earlier nodes were called minions
+---------------------------------------------------------------------
+
+kubernetes Architecture:
+
+MASTER SECTION:
+
+
+API SERVER:
+	It's a kind of a gatekeeper for entire cluster in case if you want to 
+	create,update,delete or even display any kubernetes objects in a kubernetes
+	cluster it has to go through API server. API server validates and configures
+	the API objects that we submit these api can be pods,sevices,replication controllers
+	,deployments or some more. We interact primarily with API server using 
+	kubectl command 
+
+Scheduler:
+	it is responsible for physically scheduling the pods across so depending 
+	upon the requirement that we submit to the API server the schedular will 
+	schedule pods accordingly 
+
+Controller Manager:
+	Control Manager is responsible for overall health of the entire cluster it
+	ensures that nodes inside the cluster are up and running and correct number 
+	of pods are running as mentioned in the spec file 
+	
+ETCD:
+  it is the central data-base to store the current state of the cluster at any point
+  of time, your cluster information, nodes, secretes, controllers and other objects
+  configuration is stored inside the ETCD database any component of kubernets can 
+  query the ETCD to understand the state of the cluster so this is going to be the 
+  single source of truth for all the components and the nodes inside the kubernetes
+  cluster 
+  
+
+
+
+
+WORKER NODE SECTION:
+
+Kubelet:
+	Kubelet looks at the pods spec that is submitted to the API server and ensures
+	that containers running in the descibed pods spec are running and healthy incase if 		
+	kubelet notices any issues with those pods then it tries to restart those pods
+	on the same nodes incase if the issue is with the node, master detects the 
+	node failure and launches the same pods on any other healthy node   
+
+kube-proxy:
+	kubeproxy is responsible for maintaining the entire network configuration 
+	it essentially maintains the distributed network across all the nodes
+	quartz and containers and it also exposes services kubeproxy is estentially 
+	core networking component of kubernetes 
+
+
+Pods:
+    it is basically a scheduling unit of kubernetes each pod contain one or more 
+    container in most cases there will be one container there are scenario where
+    we have to run more than one conatiners (dependent containers) in a pod.
+    with the help of pods we can deploy multiple dependent containers together in 
+    a pod. In kubernetes we primarily interact with pods than containers.
+    Each pod has a unique IP adress inside the kubernetes cluster  
+
+Containers:
+	Containers provide the run time environment for applications. Containers 
+	will reside inside a pod. Containers consist of applications,libraires and
+	their dependencies 	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

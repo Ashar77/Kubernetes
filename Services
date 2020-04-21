@@ -1,0 +1,120 @@
+Imagine that you have been asked to deploy web app
+
+How does this front end web app is exposed to outside world?
+
+How do front end web app is connected to backend database ?
+
+How do we resolve Pod IP changed, when they die?
+
+-------------------------------------------------------------
+
+is it possible to have permenent IP address?
+
+how do various components connect and communicate ?
+
+how do applications are exposed to outside world?
+---------------------------------------------------
+
+What is a Service:  Service is a way of grouping of pods , Service is like a gatekeeper of pods
+
+
+Features of Service: load balancing, Service Discovery b/w apps, features to support zero down time app deployments 
+
+
+We have different Services depending on different type of containers!
+
+consider we have front-end app and a backend-app 
+
+front-end app is wrapped in front-end pods
+
+
+back-end app is wrapped in back-end pods
+
+therefore,
+
+for front-end pods we will have front-end Service
+
+for back-end pods we will have back-end Service
+
+
+Once we have these services in place it groups the pods and connects them together 
+
+
+Now we have setup the services...BUT!
+
+how do these services discovered there respective pods and connect to it !? 
+
+Answer is: through LABELS and SELECTORS 
+
+
+
+------------------------------------------------------------------------------------------------
+Types of Services:
+
+ClusterIP Service:
+	it is reachable only within a cluster 
+
+Uses of ClusterIP Service:
+		Connection b/w front-end pods and back-end pods
+		typically we only expose front-end pods to the outside world
+      		we do not expose back-end pods due to security reasons 
+
+
+	
+NodePort Service:
+	there are other set of pods which we want to expose to the outside world
+     	e.g: when we want to expose our web app to the outside world on internet 
+
+
+LoadBalancer Service: 
+	for loadbalancing amoung the pods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

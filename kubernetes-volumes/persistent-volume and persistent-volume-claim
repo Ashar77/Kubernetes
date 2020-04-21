@@ -1,0 +1,86 @@
+consider we want to deploy containerized database in this case your company's infrastructure team provides different storage solutions such as Block, NAS, Object storage, Google Cloud disks, Aws disks and more.
+
+There need to be a 'consistent way to deal' with all these storage types 
+
+what is kubernetes solution for it ? 
+
+In enterprise level companies storage admin/os admin provide some chunk of storage, the developer request for that that storage chunk and then os admin etc store data of app on that chunk, k8s align with this traditional storage method
+
+
+Persistent-volume = Piece of storage in cluster 
+
+Persistent-volume-claim = Request for storage 
+
+
+LifeCycle of a Persistent Volume:
+
+Provisioning ------> Binding ------> Using ------> Reclaiming 
+
+
+
+
+2 ways for provisioning are Static and Dynamic, can be used together
+
+
+not complement to one and other 
+
+ 
+
+Static = PV needs to be created before PVC
+
+Dynamic = PV is created at the same time of PVC
+
+
+Static provisioning:
+
+	consider developer has demanded for pv in pvc of 50 gb but 
+	rightnow admin has only 40gb to be allocated, in this case 
+	developer has to wait untill admin add futher gbs to the
+	pv pool  
+
+
+
+Dynamic Provisioning:
+
+	storage classes and default storage class is made by 
+	the admin 
+	developer claims PV from the pool and refrences claim in pod
+
+	
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

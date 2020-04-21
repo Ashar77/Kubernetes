@@ -1,0 +1,3 @@
+It ensures that a specified number of pods are running at any time
+
+replication controllers and pods are associated with labels

@@ -1,0 +1,32 @@
+how to access my app from which i made a docker file and created a image 
+and then put that image  into pod (deployment)
+
+you have to expose that deployment.
+
+how to expose a deployment:
+
+while exposing a deployment we are creating a service 
+
+consider we have a deployment named nginx-deploy
+
+and we want to expose it (then accessing it on browser)
+
+for this purpose we have a command 
+
+"
+kubectl expose deployment nginx-deploy --type=LoadBalancer --port=80
+
+"
+
+this will expose the deployment,and a service with the same name as deployment(in this case 'nginx-deploy') will be created
+
+to access the app we need a url for this purpose we have a simple minikube command:
+
+"
+minikube service nginx-deploy --url
+"
+
+this command will generate a url 
+
+copy that url and paste it in your browser and you can see our app !
+

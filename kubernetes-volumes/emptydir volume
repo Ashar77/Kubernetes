@@ -1,0 +1,58 @@
+emptydir volume is first created when pod is asssigned to a node in a cluster 
+stays as long as pod is running 
+it is initially empty
+
+once pod is removed in any case from a node, emptyDir is deleted forever
+
+used for:
+
+Temporoary space and to share some data between the multiple container within the pod 
+
+where does emptydir directory/folder is created ? on node or in a pod? inside a pod i guess,
+if on the node? then where on the node?
+
+
+
+consider    emptyDir - Describe 
+
+
+
+node: node on which this pod is scheduled
+
+Mounts:
+        when the pod is scheduled on node it created the temporary directory cache on that node and then mounts that directory inside the 
+pod /cache , then the containers inside the pods can access this mount point " /cache " and store some temporary data inside that , so when
+the pod dies or deleted from that node the directory will go off and the contents inside the directory will be complety wiped off 
+this type of volume is only suitable for storing temporary data. 
+
+on deleting the pod contents inside the /cache will be deleted if any 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+in virtualization basic scheduling unit is Virtual Machine (VM)
+
+in Containerization basic scheduling unit is Container
+
+in Kubernetes basic scheduling unit are pods
+
+----------------------------------------------
+
+Objectives to learn:
+
+what is pod 
+
+pod deployment 
+
+multi-container pod 
+
+pod networking 
+
+Inter-pod networking and Intra-pod networking 
+
+pod-lifecycle 
+
+pod manifest file 
+
+----------------------------------------------
+
+The concept of scheduling in cloud computing refers to  allocating VMs to run on the available resources in order to fulfill users'demands
+
+In kubernetes we do not interact with containers directly,containers are inside the pods 
+we scale up and scale down the pods a/c to the traffic. 
+
+Normally we have one container per pod but we can also have 2 or more dependent containers together in a pod 
+
+Once we deployed a pod inside a kubernetes cluster it will get its own IP adress 
+
+2 or more containers in a pod have the same IP adress the only distiguishing thing between them
+is "Ports"  
+
+Containers in the same pod not only share same IP address they also share same volume,same c-group
+limits and even same IPC names 
+
+
+Inter-pod communication ---> communication between 2 pods
+
+intra-pod communication ----> communication within a pod
+
+containers within a pod communicate using a shared "local-host"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

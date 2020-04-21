@@ -1,0 +1,17 @@
+image is created by code and all its dependencies
+
+the running instance of image is called container
+
+
+Docker:
+	build , ship and run containerized apps 
+
+
+InfraStructure stack:
+	docker engine is on top on our OS 
+
+Docker Hub:
+	the place where you upload and download docker images 
+
+Docker project:
+	Docker opensource community project on github  

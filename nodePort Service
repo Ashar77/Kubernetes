@@ -1,0 +1,128 @@
+Imagine that, you have deployed your web app on to Kubernetes cluster
+
+Now, you to need to expose it to outside world on the internet  
+
+
+suppose we have an app inside a pod , user will access this app
+but we can not trust the PodIP because they are affimiral and also there is no connectivity
+between the user and the service  the solution to both these problems is nodePort Service
+
+
+NodePort: the port on the Node where the pod is running 
+
+Nodeport services exposes the app on node where ever the pod is deployed 
+
+nodeport = [3000-32767]
+
+the user will access the app by:
+
+	https://nodeIP:nodePort ----> user can access the app using browser 
+
+
+nodeIP --> gcloud .. external ip 
+
+
+
+TargetPort: the port where actual app is running
+
+
+curl http:// podIP:targetport           
+
+curl http:// ServiceIP:targetport
+
+
+
+
+
+
+
+
+Downsides of NodePort 
+
+you can only have one Service per port
+
+you can only use ports 3000-32767
+
+if your Node/VM IP address change, you need to deal with that 
+
+
+this service is good for demo app or test app or something which is temporary or 
+when you have to be cost efficient 
+
+
+
+Service Ip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

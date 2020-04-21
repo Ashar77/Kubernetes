@@ -1,0 +1,19 @@
+#Service - laodbalancer
+
+apiVersion: v1
+kind: Service
+metadata: 
+ name: my-lbservice
+ labels:
+  app: nginx-app          #labels to this service are completly optional for simplicity purpose we are using same labels as pod labels 
+spec:
+ selector:
+  app: nginx-app     # same as labels of pods which are needed under this service
+ 
+ type: LoadBalancer
+ ports: 
+  - nodePort: 31001
+    port: 80          #port on which service is running , it is mandatory
+    targetPort: 80    # port on the target  container where the service is running generally  both are same  
+
+  

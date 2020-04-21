@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+ name: kashifpod 				# name of the object we are creating
+ labels:
+  app: nginx
+  tier: dev  
+
+
+spec:
+ containers:
+  - name: ourcontainer
+    image: aamirpinger/helloworld 

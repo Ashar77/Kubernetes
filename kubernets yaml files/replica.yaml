@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+        name: rs1
+spec: 
+        replicas: 5
+        selector: 
+               matchLabels: 
+                         app: FE
+        template:
+               metadata:
+                         name: rpds
+                         labels:
+                            app: FE
+               spec:
+                         containers:
+                           - name: nginx
+                             image: nginx
+ 

@@ -1,0 +1,6 @@
+after successful creation of deployment 
+when i check the staus of pod, it was showing
+'image pull backoff' and after few minutes 
+many of the pods were running and after a small delay all of the pods were running, was this due to 
+healthcheck in pods or "image pull backoff" gets 
+eliminated itself after few minutes 
